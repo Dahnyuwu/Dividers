@@ -1,0 +1,17 @@
+C:/Escuela/Dividers/src/tb_divider.sv {1 {vlog -work work -vopt -sv -stats=none C:/Escuela/Dividers/src/tb_divider.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Escuela/Dividers/proj_questa/Dividers.mpf' is used as the ini file.
+-- Compiling module tb_divider
+
+Top level modules:
+	tb_divider
+
+} {} {}} C:/Escuela/Dividers/src/CLZ_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Escuela/Dividers/src/CLZ_tb.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Escuela/Dividers/proj_questa/Dividers.mpf' is used as the ini file.
+-- Compiling module tb_clz
+
+Top level modules:
+	tb_clz
+
+} {} {}}

@@ -1,0 +1,138 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/jdhuerta/AppData/Local/quartus
+T_opt
+!i145 1
+!i144 0
+!s110 1781664139
+VzOJYaZYDgmWm22VCIBgXJ0
+04 6 4 work tb_clz fast 0
+=5-44e517c92f75-6a32098a-67-7158
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U16 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+OL;O;2025.2;82
+vCLZ
+Z2 2C:/Escuela/Dividers/src/divider.sv
+Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z4 !s110 1781663812
+!i10b 1
+!s100 gSSKlL4h78J6P5_l:]C<J2
+IYTBJh_kSB3:K6^V@^CTf@1
+S1
+Z5 dC:/Escuela/Dividers/proj_questa
+Z6 w1781662935
+Z7 8C:/Escuela/Dividers/src/divider.sv
+Z8 FC:/Escuela/Dividers/src/divider.sv
+!i122 1
+L0 18 47
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z11 !s108 1781663812.000000
+Z12 !s107 C:/Escuela/Dividers/src/divider.sv|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Escuela/Dividers/src/divider.sv|
+!i113 0
+Z14 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 tCvgOpt 0 defaultOptions 1085333592
+n@c@l@z
+vdivider
+R2
+R3
+R4
+!i10b 1
+!s100 a?]Zl@YLHLXANa0]>A@jK2
+IMUl31Dkob`E2YX7ZkE`fX1
+S1
+R5
+R6
+R7
+R8
+!i122 1
+L0 1 16
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+vtb_clz
+2C:/Escuela/Dividers/src/CLZ_tb.sv
+R3
+!s110 1781664134
+!i10b 1
+!s100 >fh:edaa^8H6=CgW41XJf2
+Ik6k_CUGN;5eI?A_ffjHUl3
+S1
+R5
+w1781664131
+8C:/Escuela/Dividers/src/CLZ_tb.sv
+FC:/Escuela/Dividers/src/CLZ_tb.sv
+!i122 6
+L0 3 129
+R9
+R10
+r1
+!s85 0
+31
+!s108 1781664134.000000
+!s107 C:/Escuela/Dividers/src/CLZ_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Escuela/Dividers/src/CLZ_tb.sv|
+!i113 0
+R14
+R15
+vtb_divider
+2C:/Escuela/Dividers/src/tb_divider.sv
+R3
+!s110 1781663813
+!i10b 1
+!s100 F8QnGGRYU^6C3eZ]3V9<P3
+I17aGm4WNOQQCaP`GbFmAT0
+S1
+R5
+w1781653636
+8C:/Escuela/Dividers/src/tb_divider.sv
+FC:/Escuela/Dividers/src/tb_divider.sv
+!i122 2
+L0 5 93
+R9
+R10
+r1
+!s85 0
+31
+!s108 1781663813.000000
+!s107 C:/Escuela/Dividers/src/tb_divider.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Escuela/Dividers/src/tb_divider.sv|
+!i113 0
+R14
+R15
