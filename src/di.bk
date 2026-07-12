@@ -1,0 +1,170 @@
+module divider #(
+    // Parameters
+        parameter WIDTH = 8
+    )(
+    // Inputs
+        input  logic [WIDTH-1:0] srca,
+        input  logic [WIDTH-1:0] srcb,
+        input  logic             is_signed, clk, rst,
+    
+    // Outputs
+        output logic [WIDTH-1:0] result,
+        output logic [WIDTH-1:0] rem,
+        output logic             div_zero_f
+);
+
+        // Variables
+            logic   [WIDTH-1: 0]            srca_abs_, srcb_abs_;      // D
+            logic   [WIDTH*2: 0]            Di_, di_;  // Extra bit for sign / d
+            logic   [$clog2(WIDTH)-1: 0]    zeros_;
+
+        // Absolutos
+            assign srca_abs_ = (is_signed & srca[WIDTH-1]) ? ((~srca) + 1'b1) : srca; 
+            assign srcb_abs_ = (is_signed & srcb[WIDTH-1]) ? ((~srcb) + 1'b1) : srcb; 
+
+        // Zeros count for shift
+            CLZ #(.WIDTH(WIDTH)) CLZB(.in(srcb_abs_), .out(zeros_));
+
+        // Shifts
+            assign Di_ = ({WIDTH*2+1{1'b0}} | srca_abs_) << (zeros_ + 8);
+            assign di_ = ({WIDTH*2+1{1'b0}} | srcb_abs_) << (zeros_ + 8);
+
+        // Variables
+            logic   [WIDTH*2: 0]    Di_2_           [0: WIDTH*2];
+            logic   [WIDTH*2: 0]    Di_2_R_         [0: WIDTH*2];
+            logic   [WIDTH*2: 0]    Qsn_            [0: WIDTH*2];
+            logic   [WIDTH*2: 0]    Qsp_            [0: WIDTH*2];
+            logic   [WIDTH*2: 0]    Qsn_R_          [0: WIDTH*2];
+            logic   [WIDTH*2: 0]    Qsp_R_          [0: WIDTH*2];
+
+                // First register
+                    Register    #(.LENGTH(WIDTH*2)) F_Di_2_R(
+                    // Inputs    
+                        .clk(clk),
+                        .rst(rst),
+                        .ena(1'b1),
+                        .in(Di_ << 1),
+
+                    // Outputs
+                        .out(Di_2_R_[0])
+                    );
+                
+            logic [2*WIDTH:0] Di_shift;
+
+            assign Di_shift = Di_ << 1;
+
+            assign Qsn_R_[0] = Di_shift[2*WIDTH] & Di_shift[2*WIDTH-1];
+            assign Qsp_R_[0] = ~Di_shift[2*WIDTH] & Di_shift[2*WIDTH-1];
+
+
+
+            generate
+                genvar i;
+                for (i=1; i<WIDTH*2; i++) begin : xd
+                    assign Di_2_[i] = (Qsp_R_[i-1] | Qsn_R_[i-1]) ? 
+                                            (Qsp_R_[i-1] ? 
+                                                ((Di_2_R_[i-1] - (di_)) << 1)  : 
+                                                ((Di_2_R_[i-1] + (di_)) << 1) 
+                                            ): 
+                                            
+                                            (Di_2_R_[i-1] << 1);
+
+                    assign Qsp_[i]    = (~Di_2_[i][WIDTH*2] & Di_2_[i][WIDTH*2-1]) ? 
+                                            (((Qsp_R_[i-1]) << 1) | 1'b1): 
+                                            (((Qsp_R_[i-1]) << 1));
+
+                    assign Qsn_[i]    = ( Di_2_[i][WIDTH*2] & Di_2_[i][WIDTH*2-1]) ? 
+                                            (((Qsn_R_[i-1]) << 1) | 1'b1): 
+                                            (((Qsn_R_[i-1]) << 1));
+
+                // Di_2 Registers 
+                    Register    #(.LENGTH(WIDTH*2)) Di_2_R(
+                    // Inputs    
+                        .clk(clk),
+                        .rst(rst),
+                        .ena(1'b1),
+                        .in(Di_2_[i]),
+
+                    // Outputs
+                        .out(Di_2_R_[i])
+                    );
+
+                // Q+ Registers
+                    Register    #(.LENGTH(WIDTH*2)) Qpr(
+                    // Inputs    
+                        .clk(clk),
+                        .rst(rst),
+                        .ena(1'b1),
+                        .in(Qsp_[i]),
+
+                    // Outputs
+                        .out(Qsp_R_[i])
+                    );
+
+                // Q- Registers
+                    Register    #(.LENGTH(WIDTH*2)) Qnr(
+                    // Inputs    
+                        .clk(clk),
+                        .rst(rst),
+                        .ena(1'b1),
+                        .in(Qsn_[i]),
+
+                    // Outputs
+                        .out(Qsn_R_[i])
+                    );
+                    
+                end
+            endgenerate     
+
+        assign result = Qsp_R_[WIDTH] - Qsn_R_[WIDTH];
+
+endmodule
+
+
+// Modulo CLZ asistido por IA
+module CLZ #(
+    // Parameters
+        parameter WIDTH = 64,
+        parameter LOG   = $clog2(WIDTH)
+    )(
+    // Inputs
+        input  logic [WIDTH-1:0] in,
+        
+    // Outputs
+        output logic [LOG:0] out   // +1 para representar WIDTH
+    );
+
+    generate
+        if (WIDTH == 1) begin : base_case
+            assign out = (in == 1'b0) ? 1 : 0;
+        end
+
+        else begin : recursive_case
+            localparam HALF = WIDTH / 2;
+
+            logic [LOG-1:0] clz_high;
+            logic [LOG-1:0] clz_low;
+
+            logic high_zero;
+
+            assign high_zero = (in[WIDTH-1:HALF] == 0);
+
+            CLZ #(.WIDTH(HALF)) clz_hi (
+                .in(in[WIDTH-1:HALF]),
+                .out(clz_high)
+            );
+
+            CLZ #(.WIDTH(HALF)) clz_lo (
+                .in(in[HALF-1:0]),
+                .out(clz_low)
+            );
+
+            always_comb begin
+                if (high_zero)
+                    out = HALF + clz_low;
+                else
+                    out = clz_high;
+            end
+        end
+    endgenerate
+endmodule

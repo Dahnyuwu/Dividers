@@ -6,6 +6,16 @@ Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
 Top level modules:
 	tb_divider
 
+} {} {}} C:/Escuela/Dividers/src/Register.sv {1 {vlog -work work -vopt -sv -stats=none C:/Escuela/Dividers/src/Register.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Escuela/Dividers/proj_questa/Dividers.mpf' is used as the ini file.
+-- Compiling module Register
+-- Compiling module Register_DW
+
+Top level modules:
+	Register
+	Register_DW
+
 } {} {}} C:/Escuela/Dividers/src/CLZ_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Escuela/Dividers/src/CLZ_tb.sv
 Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
 ** Note: (vlog-220) 'C:/Escuela/Dividers/proj_questa/Dividers.mpf' is used as the ini file.
@@ -13,5 +23,14 @@ Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
 
 Top level modules:
 	tb_clz
+
+} {} {}} C:/Escuela/Dividers/src/divider.sv {1 {vlog -work work -vopt -sv -stats=none C:/Escuela/Dividers/src/divider.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Escuela/Dividers/proj_questa/Dividers.mpf' is used as the ini file.
+-- Compiling module divider
+-- Compiling module CLZ
+
+Top level modules:
+	divider
 
 } {} {}}

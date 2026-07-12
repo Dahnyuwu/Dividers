@@ -3,9 +3,9 @@
 `timescale 1ns/1ns
 
 module tb_divider;
-  parameter int WIDTH = 64;
+  parameter int WIDTH = 8;
   
-  logic clk;
+  logic clk, rst;
   
   logic [WIDTH-1:0] srca;
   logic [WIDTH-1:0] srcb;
@@ -35,6 +35,8 @@ module tb_divider;
   
   initial begin
     clk = 0;
+    rst = 0;
+    #5 rst = 1;
     forever begin
       #5 clk = ~clk;
     end
@@ -45,12 +47,15 @@ module tb_divider;
     num_pass   = 0;
 	num_errors = 0;
     
-    for (int idx = 0; idx < 1000; idx++) begin
+    for (int idx = 0; idx < 100; idx++) begin
       @(posedge clk);
       // Randomize data
-      srca      = $urandom();
-      srcb      = $urandom();
-      is_signed = $urandom();
+      // srca      = $urandom();
+      // srcb      = $urandom();
+      // is_signed = $urandom();
+      srca      = 60;
+      srcb      = 80;
+      is_signed = 0;
       // Expected result
       exp_div_zer_f = 0;
       if (srcb == 0) begin

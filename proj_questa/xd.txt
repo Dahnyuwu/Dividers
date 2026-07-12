@@ -1,0 +1,35 @@
+Reading pref.tcl
+
+# 2025.2
+
+# do run.do
+# 
+# if {[file exists work]} {
+# vdel -lib work -all
+# }
+# 
+# vlib work
+# vmap work work
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# 
+# Compilación
+# vlog -sv ../src/*.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:17:31 on Jun 26,2026
+# vlog -sv ../src/CLZ_tb.sv ../src/divider.sv ../src/tb_divider.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module tb_clz
+# -- Compiling module divider
+# ** Error: ../src/divider.sv(20): (vlog-2730) Undefined variable: 'WIDTH'.
+# ** Error: (vlog-13069) ../src/divider.sv(25): near "assign": syntax error, unexpected assign.
+# End time: 21:17:31 on Jun 26,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/altera/25.1std/questa_fse/win64/vlog failed.
+# Error in macro ./run.do line 11
+# C:/altera/25.1std/questa_fse/win64/vlog failed.
+#     while executing
+# "vlog -sv ../src/*.sv"
+Questa> 
