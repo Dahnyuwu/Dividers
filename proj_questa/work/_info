@@ -14,10 +14,10 @@ Z1 dC:/Escuela/Dividers/proj_questa
 T_opt
 !i145 1
 !i144 0
-!s110 1783923862
-VTObJX_@RG3=D;Un6:OV5c2
+!s110 1783926875
+V[=X?G:L^VP6:9MF=Xe[943
 04 10 4 work tb_divider fast 0
-=1-44e517c92f75-6a548495-1d8-5e80
+=1-44e517c92f75-6a54905a-322-5c5c
 R0
 !s12f OEM100
 !s12b OEM100
@@ -30,13 +30,13 @@ OL;O;2025.2;82
 vdivider
 Z2 2../src/CLZ_tb.sv|../src/Register.sv|../src/divider.sv|../src/tb_divider.sv
 Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z4 !s110 1783923860
+Z4 !s110 1783926874
 !i10b 1
 !s100 6AcifZPXczV`^VncnOUe^3
 Iz7_6n9725Rg17J8D_2aMo0
 S1
 R1
-w1783923812
+w1783926772
 8../src/divider.sv
 F../src/divider.sv
 !i122 0
@@ -46,7 +46,7 @@ Z6 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z7 !s108 1783923860.000000
+Z7 !s108 1783926874.000000
 Z8 !s107 ../src/tb_divider.sv|../src/divider.sv|../src/Register.sv|../src/CLZ_tb.sv|
 Z9 !s90 -sv|../src/CLZ_tb.sv|../src/Register.sv|../src/divider.sv|../src/tb_divider.sv|
 !i113 0
@@ -134,11 +134,11 @@ R2
 R3
 R4
 !i10b 1
-!s100 OWJZ7RfX8bI6h5D[HD0=l1
-Ij?fn3GW[kNi68OodPZ:L52
+!s100 MQOX1bZFKb>N1_I8a<03m3
+I>LdcY0;<fjm1d5oJb_lPM3
 S1
 R1
-w1783923857
+w1783926870
 8../src/tb_divider.sv
 F../src/tb_divider.sv
 !i122 0

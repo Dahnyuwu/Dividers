@@ -14,7 +14,7 @@
 # Compilación
 # vlog -sv ../src/*.sv
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 00:24:20 on Jul 13,2026
+# Start time: 01:14:34 on Jul 13,2026
 # vlog -sv ../src/CLZ_tb.sv ../src/Register.sv ../src/divider.sv ../src/tb_divider.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module tb_clz
@@ -28,14 +28,14 @@
 # 	Register
 # 	Register_DW
 # 	tb_divider
-# End time: 00:24:20 on Jul 13,2026, Elapsed time: 0:00:00
+# End time: 01:14:34 on Jul 13,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # Simulación
 # vsim -voptargs=+acc work.tb_divider
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
 # vsim -voptargs="+acc" work.tb_divider 
-# Start time: 00:24:21 on Jul 13,2026
+# Start time: 01:14:34 on Jul 13,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
@@ -65,5 +65,5 @@
 # TEST PASS
 # ** Note: $finish    : ../src/tb_divider.sv(93)
 #    Time: 100005 ns  Iteration: 1  Instance: /tb_divider
-# End time: 00:24:23 on Jul 13,2026, Elapsed time: 0:00:02
+# End time: 01:14:36 on Jul 13,2026, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
