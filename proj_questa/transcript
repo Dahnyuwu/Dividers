@@ -14,7 +14,7 @@
 # Compilación
 # vlog -sv ../src/*.sv
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:13:04 on Jul 11,2026
+# Start time: 23:53:33 on Jul 12,2026
 # vlog -sv ../src/CLZ_tb.sv ../src/Register.sv ../src/divider.sv ../src/tb_divider.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module tb_clz
@@ -25,17 +25,16 @@
 # 
 # Top level modules:
 # 	tb_clz
-# 	Register
 # 	Register_DW
 # 	tb_divider
-# End time: 20:13:04 on Jul 11,2026, Elapsed time: 0:00:00
+# End time: 23:53:33 on Jul 12,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # Simulación
 # vsim -voptargs=+acc work.tb_divider
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
 # vsim -voptargs="+acc" work.tb_divider 
-# Start time: 20:13:04 on Jul 11,2026
+# Start time: 23:53:33 on Jul 12,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
@@ -57,13 +56,215 @@
 # Loading sv_std.std
 # Loading work.tb_divider(fast)
 # Loading work.divider(fast)
+# Loading work.Register(fast)
+# Loading work.Register(fast__1)
 # 
 # 
 # Corre toda la simulación
 # run -all
-# NUM_PASS: 100, NUM_ERRORS: 0
-# TEST PASS
-# ** Note: $finish    : ../src/tb_divider.sv(96)
+# ** Error: Error, iteration: 0, srca: 0x49, srcb: 0x7a, is_signed: 0, exp_result: 0x0, result: 0xx, exp_rem: 49, rem: x, exp_div_zer_f: 0, div_zero_f: x
+#    Time: 15 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 1, srca: 0xda, srcb: 0x4e, is_signed: 0, exp_result: 0x2, result: 0xx, exp_rem: 3e, rem: x, exp_div_zer_f: 0, div_zero_f: x
+#    Time: 25 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 2, srca: 0x9b, srcb: 0xd9, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 9b, rem: 49, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 35 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 3, srca: 0x57, srcb: 0x9b, is_signed: 1, exp_result: 0x0, result: 0x2, exp_rem: 57, rem: 3e, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 45 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 4, srca: 0xf3, srcb: 0x46, is_signed: 0, exp_result: 0x3, result: 0x26, exp_rem: 21, rem: 15, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 55 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 5, srca: 0x80, srcb: 0xd8, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 80, rem: 57, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 65 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 6, srca: 0x88, srcb: 0x7, is_signed: 1, exp_result: 0xef, result: 0x3, exp_rem: ff, rem: 21, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 75 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 7, srca: 0xf3, srcb: 0x50, is_signed: 0, exp_result: 0x3, result: 0x26, exp_rem: 3, rem: 50, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 85 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 8, srca: 0x73, srcb: 0xbb, is_signed: 0, exp_result: 0x0, result: 0xef, exp_rem: 73, rem: ff, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 95 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 9, srca: 0xae, srcb: 0xcf, is_signed: 0, exp_result: 0x0, result: 0x3, exp_rem: ae, rem: 3, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 105 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 10, srca: 0xc7, srcb: 0x37, is_signed: 0, exp_result: 0x3, result: 0x2c, exp_rem: 22, rem: a7, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 115 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 11, srca: 0x88, srcb: 0x7b, is_signed: 0, exp_result: 0x1, result: 0x1a, exp_rem: d, rem: b6, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 125 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 12, srca: 0xc, srcb: 0xba, is_signed: 1, exp_result: 0x0, result: 0x3, exp_rem: c, rem: 22, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 135 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 13, srca: 0x48, srcb: 0xf9, is_signed: 0, exp_result: 0x0, result: 0x1, exp_rem: 48, rem: d, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 145 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 14, srca: 0x90, srcb: 0xfd, is_signed: 1, exp_result: 0x25, result: 0x0, exp_rem: ff, rem: c, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 155 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 15, srca: 0x6e, srcb: 0xb9, is_signed: 1, exp_result: 0xff, result: 0x6, exp_rem: 27, rem: e6, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 165 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 16, srca: 0x4e, srcb: 0x6f, is_signed: 0, exp_result: 0x0, result: 0x25, exp_rem: 4e, rem: ff, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 175 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 17, srca: 0x89, srcb: 0xb5, is_signed: 1, exp_result: 0x1, result: 0xff, exp_rem: d4, rem: 27, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 185 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 18, srca: 0x58, srcb: 0x8e, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 58, rem: 4e, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 195 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 19, srca: 0x89, srcb: 0xac, is_signed: 1, exp_result: 0x1, result: 0x1, exp_rem: dd, rem: d4, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 205 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 20, srca: 0x21, srcb: 0x9d, is_signed: 0, exp_result: 0x0, result: 0x67, exp_rem: 21, rem: 36, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 215 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 21, srca: 0xa9, srcb: 0xa7, is_signed: 1, exp_result: 0x0, result: 0x1, exp_rem: a9, rem: dd, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 225 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 22, srca: 0x76, srcb: 0x8, is_signed: 0, exp_result: 0xe, result: 0x55, exp_rem: 6, rem: 98, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 235 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 23, srca: 0xd9, srcb: 0x5e, is_signed: 1, exp_result: 0x0, result: 0x0, exp_rem: d9, rem: a9, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 245 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 24, srca: 0x70, srcb: 0x93, is_signed: 0, exp_result: 0x0, result: 0xe, exp_rem: 70, rem: 6, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 255 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 25, srca: 0xcf, srcb: 0x4, is_signed: 1, exp_result: 0xf4, result: 0x0, exp_rem: ff, rem: d9, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 265 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 26, srca: 0x9d, srcb: 0x61, is_signed: 1, exp_result: 0xff, result: 0x52, exp_rem: fe, rem: 30, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 275 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 27, srca: 0x91, srcb: 0x2c, is_signed: 0, exp_result: 0x3, result: 0xf4, exp_rem: d, rem: ff, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 285 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 28, srca: 0x99, srcb: 0x1, is_signed: 0, exp_result: 0x99, result: 0xff, exp_rem: 0, rem: fe, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 295 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 29, srca: 0x8e, srcb: 0x86, is_signed: 0, exp_result: 0x1, result: 0x3, exp_rem: 8, rem: d, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 305 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 30, srca: 0xb, srcb: 0x44, is_signed: 0, exp_result: 0x0, result: 0x99, exp_rem: b, rem: 0, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 315 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 31, srca: 0x1b, srcb: 0x27, is_signed: 0, exp_result: 0x0, result: 0x75, exp_rem: 1b, rem: 50, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 325 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 32, srca: 0x79, srcb: 0x4c, is_signed: 1, exp_result: 0x1, result: 0x0, exp_rem: 2d, rem: b, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 335 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 33, srca: 0x5d, srcb: 0x23, is_signed: 1, exp_result: 0x2, result: 0x0, exp_rem: 17, rem: 1b, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 345 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 34, srca: 0xff, srcb: 0x23, is_signed: 1, exp_result: 0x0, result: 0x1, exp_rem: ff, rem: 2d, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 355 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 35, srca: 0xbb, srcb: 0x30, is_signed: 1, exp_result: 0xff, result: 0x2, exp_rem: eb, rem: 17, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 365 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 36, srca: 0xb4, srcb: 0x31, is_signed: 0, exp_result: 0x3, result: 0x0, exp_rem: 21, rem: ff, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 375 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 37, srca: 0xdb, srcb: 0xe4, is_signed: 0, exp_result: 0x0, result: 0xff, exp_rem: db, rem: eb, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 385 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 38, srca: 0xe7, srcb: 0x14, is_signed: 0, exp_result: 0xb, result: 0x3, exp_rem: b, rem: 21, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 395 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 39, srca: 0xc6, srcb: 0x2a, is_signed: 1, exp_result: 0xff, result: 0x19, exp_rem: f0, rem: 7, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 405 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 40, srca: 0xef, srcb: 0x43, is_signed: 0, exp_result: 0x3, result: 0xb, exp_rem: 26, rem: b, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 415 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 41, srca: 0x21, srcb: 0xc9, is_signed: 0, exp_result: 0x0, result: 0xff, exp_rem: 21, rem: f0, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 425 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 42, srca: 0x9d, srcb: 0xc4, is_signed: 1, exp_result: 0x1, result: 0x3, exp_rem: d9, rem: 26, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 435 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 43, srca: 0x22, srcb: 0x88, is_signed: 0, exp_result: 0x0, result: 0x26, exp_rem: 22, rem: 5f, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 445 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 44, srca: 0xb7, srcb: 0xb8, is_signed: 1, exp_result: 0x1, result: 0x1, exp_rem: ff, rem: d9, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 455 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 45, srca: 0x1, srcb: 0x3d, is_signed: 0, exp_result: 0x0, result: 0x71, exp_rem: 1, rem: 1a, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 465 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 46, srca: 0x77, srcb: 0x31, is_signed: 1, exp_result: 0x2, result: 0x1, exp_rem: 15, rem: ff, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 475 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 47, srca: 0xf4, srcb: 0x3, is_signed: 1, exp_result: 0xfc, result: 0x0, exp_rem: 0, rem: 1, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 485 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 48, srca: 0xd1, srcb: 0xa8, is_signed: 1, exp_result: 0x0, result: 0x2, exp_rem: d1, rem: 15, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 495 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 49, srca: 0x56, srcb: 0x8e, is_signed: 0, exp_result: 0x0, result: 0xfc, exp_rem: 56, rem: 0, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 505 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 50, srca: 0xe1, srcb: 0x21, is_signed: 1, exp_result: 0x0, result: 0x0, exp_rem: e1, rem: d1, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 515 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 51, srca: 0x6b, srcb: 0x9a, is_signed: 0, exp_result: 0x0, result: 0x67, exp_rem: 6b, rem: 34, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 525 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 52, srca: 0x73, srcb: 0x9d, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 73, rem: e1, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 535 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 53, srca: 0xe8, srcb: 0xf8, is_signed: 1, exp_result: 0x3, result: 0x55, exp_rem: 0, rem: 49, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 545 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 54, srca: 0xd5, srcb: 0x94, is_signed: 1, exp_result: 0x0, result: 0x56, exp_rem: d5, rem: 4d, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 555 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 55, srca: 0x47, srcb: 0xf, is_signed: 0, exp_result: 0x4, result: 0x3, exp_rem: b, rem: 0, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 565 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 56, srca: 0x3, srcb: 0xa9, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 3, rem: d5, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 575 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 57, srca: 0x7c, srcb: 0xc3, is_signed: 1, exp_result: 0xfe, result: 0x4, exp_rem: 2, rem: b, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 585 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 58, srca: 0x70, srcb: 0xc9, is_signed: 0, exp_result: 0x0, result: 0x52, exp_rem: 70, rem: 41, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 595 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 59, srca: 0x32, srcb: 0x61, is_signed: 1, exp_result: 0x0, result: 0xfe, exp_rem: 32, rem: 2, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 605 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 60, srca: 0xfe, srcb: 0xc5, is_signed: 1, exp_result: 0x0, result: 0x26, exp_rem: fe, rem: ae, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 615 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 61, srca: 0xce, srcb: 0x79, is_signed: 1, exp_result: 0x0, result: 0x0, exp_rem: ce, rem: 32, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 625 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 62, srca: 0x87, srcb: 0xe5, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 87, rem: fe, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 635 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 63, srca: 0xf4, srcb: 0x81, is_signed: 1, exp_result: 0x0, result: 0x0, exp_rem: f4, rem: ce, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 645 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 64, srca: 0x28, srcb: 0x92, is_signed: 1, exp_result: 0x0, result: 0x16, exp_rem: 28, rem: ad, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 655 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 65, srca: 0x48, srcb: 0x84, is_signed: 1, exp_result: 0x0, result: 0x0, exp_rem: 48, rem: f4, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 665 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 66, srca: 0x8b, srcb: 0x96, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 8b, rem: 28, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 675 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 67, srca: 0xbb, srcb: 0x2c, is_signed: 1, exp_result: 0xff, result: 0x0, exp_rem: e7, rem: 48, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 685 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 68, srca: 0x58, srcb: 0xab, is_signed: 0, exp_result: 0x0, result: 0x5b, exp_rem: 58, rem: 39, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 695 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 69, srca: 0xfb, srcb: 0x34, is_signed: 1, exp_result: 0x0, result: 0xff, exp_rem: fb, rem: e7, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 705 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 70, srca: 0xcb, srcb: 0xc2, is_signed: 1, exp_result: 0x0, result: 0x55, exp_rem: cb, rem: 3, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 715 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 71, srca: 0x3a, srcb: 0x30, is_signed: 1, exp_result: 0x1, result: 0x0, exp_rem: a, rem: fb, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 725 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 72, srca: 0x9e, srcb: 0xdd, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 9e, rem: cb, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 735 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 73, srca: 0xcb, srcb: 0x9c, is_signed: 0, exp_result: 0x1, result: 0x1, exp_rem: 2f, rem: a, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 745 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 74, srca: 0xcf, srcb: 0xc5, is_signed: 1, exp_result: 0x0, result: 0x1c, exp_rem: cf, rem: c8, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 755 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 75, srca: 0xf8, srcb: 0xff, is_signed: 0, exp_result: 0x0, result: 0x53, exp_rem: f8, rem: 37, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 765 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 76, srca: 0x2c, srcb: 0xb0, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 2c, rem: cf, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 775 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 77, srca: 0x67, srcb: 0x20, is_signed: 1, exp_result: 0x3, result: 0x1, exp_rem: 7, rem: f5, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 785 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 78, srca: 0x8d, srcb: 0x25, is_signed: 0, exp_result: 0x3, result: 0x2a, exp_rem: 1e, rem: ac, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 795 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 79, srca: 0x7b, srcb: 0x46, is_signed: 0, exp_result: 0x1, result: 0x3, exp_rem: 35, rem: 7, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 805 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 80, srca: 0x97, srcb: 0xe1, is_signed: 0, exp_result: 0x0, result: 0x3, exp_rem: 97, rem: 1e, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 815 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 81, srca: 0x40, srcb: 0xc5, is_signed: 0, exp_result: 0x0, result: 0x1, exp_rem: 40, rem: 35, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 825 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 82, srca: 0xb2, srcb: 0x17, is_signed: 0, exp_result: 0x7, result: 0x19, exp_rem: 11, rem: 6a, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 835 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 83, srca: 0xb9, srcb: 0x54, is_signed: 0, exp_result: 0x2, result: 0x25, exp_rem: 11, rem: 5b, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 845 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 84, srca: 0x59, srcb: 0x3f, is_signed: 0, exp_result: 0x1, result: 0x7, exp_rem: 1a, rem: 11, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 855 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 85, srca: 0xbc, srcb: 0x3b, is_signed: 1, exp_result: 0xff, result: 0x2, exp_rem: f7, rem: 11, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 865 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 86, srca: 0x1, srcb: 0x1c, is_signed: 1, exp_result: 0x0, result: 0x1, exp_rem: 1, rem: 1a, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 875 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 87, srca: 0x8c, srcb: 0x49, is_signed: 1, exp_result: 0xff, result: 0xff, exp_rem: d5, rem: f7, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 885 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 88, srca: 0xfd, srcb: 0xef, is_signed: 1, exp_result: 0x0, result: 0x0, exp_rem: fd, rem: 1, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 895 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 89, srca: 0x4d, srcb: 0x3c, is_signed: 1, exp_result: 0x1, result: 0xff, exp_rem: 11, rem: d5, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 905 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 90, srca: 0x87, srcb: 0x2d, is_signed: 1, exp_result: 0xfe, result: 0x0, exp_rem: e1, rem: fd, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 915 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 91, srca: 0x8e, srcb: 0xd0, is_signed: 1, exp_result: 0x2, result: 0x1, exp_rem: ee, rem: 11, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 925 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 92, srca: 0x23, srcb: 0x62, is_signed: 0, exp_result: 0x0, result: 0xfe, exp_rem: 23, rem: e1, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 935 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 93, srca: 0x5e, srcb: 0x63, is_signed: 0, exp_result: 0x0, result: 0x2, exp_rem: 5e, rem: ee, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 945 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 94, srca: 0x26, srcb: 0x52, is_signed: 1, exp_result: 0x0, result: 0x0, exp_rem: 26, rem: 23, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 955 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 95, srca: 0x5c, srcb: 0xac, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 5c, rem: 5e, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 965 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 96, srca: 0x5d, srcb: 0xae, is_signed: 0, exp_result: 0x0, result: 0x0, exp_rem: 5d, rem: 26, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 975 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 97, srca: 0x5a, srcb: 0xf8, is_signed: 0, exp_result: 0x0, result: 0x2a, exp_rem: 5a, rem: 5c, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 985 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 98, srca: 0x9a, srcb: 0xe5, is_signed: 0, exp_result: 0x0, result: 0x2d, exp_rem: 9a, rem: 87, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 995 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# ** Error: Error, iteration: 99, srca: 0xd, srcb: 0xb0, is_signed: 0, exp_result: 0x0, result: 0x8, exp_rem: d, rem: 4a, exp_div_zer_f: 0, div_zero_f: 0
+#    Time: 1005 ns  Scope: tb_divider File: ../src/tb_divider.sv Line: 84
+# NUM_PASS: 0, NUM_ERRORS: 100
+# TEST FAILED
+# ** Note: $finish    : ../src/tb_divider.sv(98)
 #    Time: 1005 ns  Iteration: 1  Instance: /tb_divider
-# End time: 20:13:06 on Jul 11,2026, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 1
+# End time: 23:53:35 on Jul 12,2026, Elapsed time: 0:00:02
+# Errors: 100, Warnings: 1
